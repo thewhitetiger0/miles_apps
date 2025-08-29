@@ -1,0 +1,25 @@
+# ignore venv folder
+venv/
+venv313/
+
+# ignore .idea folder
+.idea/
+
+# ignore any .iml file
+*.iml
+
+# ignore pycache folder
+__pycache__/
+
+# ignore .env file
+.env
+
+# ignore any file with .log extension
+*.log
+!app.log
+
+# ignore all files in temp folder
+temp/
+
+#ignore tester files
+tester*
