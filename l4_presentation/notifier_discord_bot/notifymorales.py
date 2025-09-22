@@ -1,5 +1,5 @@
 import discord
-from utils.env_utils import config
+from config import config
 
 
 class NotifyMorales:
@@ -13,9 +13,6 @@ class NotifyMorales:
         intents.message_content = True
 
         self.notify_morales = discord.Bot(intents=intents)
-
-        self.testing1_server_id = 1284505035614588982
-        self.testing1_general_channel_id = 1284505036348461078
 
         self.morales_user_id = 1157609962420326421
         self.notify_morales_user_id = 1284515457952645140
@@ -31,7 +28,7 @@ class NotifyMorales:
         self.call_on_message_event()
         self.notify_morales.run(token)
 
-    def decide_whether_to_notify_morales_about_message(self, message) -> int:
+    def decide_whether_to_notify_morales_about_message(self, message) -> int | None:
         """Runs some conditional statement to decide whether to notify morales and returns 1 if yes"""
 
         message_channel_is_general_chat = message.channel.id == self.ftm_general_chat_channel_id
@@ -52,6 +49,7 @@ class NotifyMorales:
 
         if message_channel_is_one_of_the_six and message_author_is_not_any_of_the_two:
             return 1
+        return None
 
     def call_on_message_event(self):
         """Calls/defines the pycord on_message function"""

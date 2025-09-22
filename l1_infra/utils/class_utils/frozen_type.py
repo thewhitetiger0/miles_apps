@@ -1,4 +1,4 @@
-class _FrozenType(type):
+class FrozenType(type):
     """Metaclass that freezes attributes and blocks reassignment."""
 
     def __setattr__(cls, name, value):

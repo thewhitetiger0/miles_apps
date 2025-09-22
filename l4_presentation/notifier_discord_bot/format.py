@@ -1,5 +1,5 @@
-from Notifier import Notifier
-from utils.env_utils import config
+from notifier import Notifier
+from config import config
 
 # bot token
 bot_token = config.tester_bot_discord_token

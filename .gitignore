@@ -23,3 +23,6 @@ temp/
 
 #ignore tester files
 tester*
+
+# ignore deploy.sh
+deploy.sh
