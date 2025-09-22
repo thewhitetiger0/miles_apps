@@ -4,7 +4,7 @@ The module provides constants and methods for accessing Discord channel IDs used
 including general channel, alert channels, sheet channels.
 """
 
-from l1_infra.utils.class_utils.frozen_type import FrozenType
+from miles_apps.l1_infra.utils.class_utils.frozen_type import FrozenType
 
 
 class MoralesServer(metaclass=FrozenType):
